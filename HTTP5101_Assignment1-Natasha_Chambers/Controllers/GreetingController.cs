@@ -36,12 +36,12 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
         /// This method will take in a number and will
         /// output a sentence with number of people to greet 
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">input of a number</param>
         /// <returns>a sentence with number of people to greet</returns> 
         /// <example>
-        /// GET api/Greeting/3
-        /// Get api/Greeting/6
-        /// Get api/Greeting/0
+        /// GET api/Greeting/3 -> "Greetings to 3 people!"
+        /// Get api/Greeting/6 -> "Greetings to 6 people!"
+        /// Get api/Greeting/0 -> "Greetings to 0 people!"
         /// </example>
         public string Get(int id)
         {
