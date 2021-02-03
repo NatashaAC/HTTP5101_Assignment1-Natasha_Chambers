@@ -28,7 +28,8 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
         /// </example>
         public int Get(int id)
         {
-            return id * id;
+            int total = id * id;
+            return total;
         }
     }
 }
