@@ -28,20 +28,26 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
 
         /*
          * Question 4 Objective:
-         * Create a method that will produce a string based on the 
+         * Create a method that will produce a sentence based on the 
          * amount of people you would like to greet
          */
 
         /// <summary>
-        /// 
+        /// This method will take in a number and will
+        /// output a sentence with number of people to greet 
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>a sentence with number of people to greet</returns> 
+        /// <example>
+        /// GET api/Greeting/3
+        /// Get api/Greeting/6
+        /// Get api/Greeting/0
+        /// </example>
         public string Get(int id)
         {
             // The value of people to greet
             int people = id;
-            string greeting = "Greetings to " + people.ToString() + "people!";
+            string greeting = "Greetings to " + people.ToString() + " people!";
             return greeting;
         }
     }
