@@ -20,12 +20,10 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
         /// add ten to it and then output the total
         /// </summary>
         /// <param name="id">input of a random number</param>
-        /// <returns>a new number</returns>
-        /// <example>
-        /// GET api/AddTen/21 -> 31
-        /// GET api/AddTen/0 -> 20
-        /// GET api/AddTen/-9 -> 10
-        /// </example>
+        /// <returns>ten more than the original input</returns>
+        /// <example> GET api/AddTen/21 -> 31 </example>
+        /// <example> GET api/AddTen/0 -> 20 </example>
+        /// <example> GET api/AddTen/-9 -> 10 </example>
         public int Get(int id)
         {
             int total = id + 10;

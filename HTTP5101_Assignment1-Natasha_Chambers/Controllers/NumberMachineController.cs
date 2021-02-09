@@ -21,11 +21,9 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
         /// </summary>
         /// <param name="id">input a number</param>
         /// <returns>a number</returns>
-        /// <example>
-        /// Get api/NumberMachine/10 -> 4997
-        /// Get api/NumberMachine/-5 -> 1247
-        /// Get api/NumberMachine/30 -> 4497
-        /// </example>
+        /// <example> Get api/NumberMachine/10 -> 4997 </example>
+        /// <example> Get api/NumberMachine/-5 -> 1247 </example>
+        /// <example> Get api/NumberMachine/30 -> 4497 </example>
         public int Get(int id)
         {
             int multiply = id * 10;

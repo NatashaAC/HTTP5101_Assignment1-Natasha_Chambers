@@ -18,9 +18,7 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
         /// This method will produce a string that says "Hello World!"
         /// </summary>
         /// <returns>a string</returns>
-        /// <example>
-        /// curl -d "" "localhost:hostnumber/api/Greeting"
-        /// </example>
+        /// <example> curl -d "" "localhost:hostnumber/api/Greeting" </example>
         public string Post()
         {
             return "Hello World!";
@@ -37,12 +35,10 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
         /// output a sentence with number of people to greet 
         /// </summary>
         /// <param name="id">input of a number</param>
-        /// <returns>a sentence with number of people to greet</returns> 
-        /// <example>
-        /// GET api/Greeting/3 -> "Greetings to 3 people!"
-        /// Get api/Greeting/6 -> "Greetings to 6 people!"
-        /// Get api/Greeting/0 -> "Greetings to 0 people!"
-        /// </example>
+        /// <returns>a sentence with the number of people to greet</returns> 
+        /// <example> GET api/Greeting/3 -> "Greetings to 3 people!" </example>
+        /// <example> Get api/Greeting/6 -> "Greetings to 6 people!" </example>
+        /// <example> Get api/Greeting/0 -> "Greetings to 0 people!" </example>
         public string Get(int id)
         {
             // The value of people to greet

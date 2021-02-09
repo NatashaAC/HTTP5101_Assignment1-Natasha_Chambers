@@ -20,12 +20,10 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
         /// square it and then output the squared number
         /// </summary>
         /// <param name="id">input of a number</param>
-        /// <returns>a new number</returns>
-        /// <example>
-        /// GET api/AddTen/2 -> 4
-        /// GET api/AddTen/-2 -> 4
-        /// GET api/AddTen/10 -> 100
-        /// </example>
+        /// <returns>input squared</returns>
+        /// <example> GET api/AddTen/2 -> 4 </example>
+        /// <example> GET api/AddTen/-2 -> 4 </example>
+        /// <example> GET api/AddTen/10 -> 100 </example>
         public int Get(int id)
         {
             int total = id * id;
