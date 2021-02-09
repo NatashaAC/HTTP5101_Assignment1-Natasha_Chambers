@@ -17,11 +17,31 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
          */
 
         /// <summary>
-        /// 
+        /// This method with take and interger determine
+        /// the amount to charge a client for web hosting 
+        /// and maintenance based on rate of $5.50/FN(FN = 14 days)
+        /// plus 13% HST
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-
+        /// <param name="id">input of an interger number</param>
+        /// <returns>3 sentences that describe the fortnight rate, tax and total</returns>
+        /// <example> 
+        ///     GET api/HostingCost/0 - 
+        ///     “1 fortnights at $5.50/FN = $5.50 CAD” 
+        ///     “HST 13% = $0.72 CAD” 
+        ///     “Total = $6.22 CAD” 
+        /// </example>
+        /// <example> 
+        ///     GET api/HostingCost/14 - 
+        ///     “2 fortnights at $5.50/FN = $11.00 CAD” 
+        ///     “HST 13% = $1.43 CAD” 
+        ///     “Total = $12.43 CAD” 
+        /// </example>
+        /// <example> 
+        ///     GET api/HostingCost/28 - 
+        ///     “3 fortnights at $5.50/FN = $16.50 CAD” 
+        ///     “HST 13% = $2.14 CAD” 
+        ///     “Total = $18.64 CAD” 
+        /// </example>
         public string Get(int id)
         {
             // Variables for rates, tax and total
@@ -43,8 +63,8 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
                 total = chargeRate + tax;
 
                 fortnightMssg = "1 fortnights at " + fortnightRate + "/FN = $" + chargeRate + " CAD";
-                taxMssg = "HST 13% = $" + Math.Round(tax, 2) + " CAD";
-                totalMssg = "Total = $" + Math.Round(total, 2) + " CAD";
+                taxMssg = "HST 13% = $" + Math.Round(tax, 2).ToString() + " CAD";
+                totalMssg = "Total = $" + Math.Round(total, 2).ToString() + " CAD";
 
             } else if (id >= 14 && id <= 21)
             {
@@ -54,8 +74,8 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
                 total = chargeRate + tax;
 
                 fortnightMssg = "2 fortnights at " + fortnightRate + "/FN = $" + chargeRate + " CAD";
-                taxMssg = "HST 13% = $" + Math.Round(tax, 2) + " CAD";
-                totalMssg = "Total = $" + Math.Round(total, 2) + " CAD";
+                taxMssg = "HST 13% = $" + Math.Round(tax, 2).ToString() + " CAD";
+                totalMssg = "Total = $" + Math.Round(total, 2).ToString() + " CAD";
 
             } else if (id > 21 && id <= 28 )
             {
@@ -65,8 +85,8 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
                 total = chargeRate + tax;
 
                 fortnightMssg = "3 fortnights at " + fortnightRate + "/FN = $" + chargeRate + " CAD";
-                taxMssg = "HST 13% = $" + Math.Round(tax, 2) + " CAD";
-                totalMssg = "Total = $" + Math.Round(total, 2) + " CAD";
+                taxMssg = "HST 13% = $" + Math.Round(tax, 2).ToString() + " CAD";
+                totalMssg = "Total = $" + Math.Round(total, 2).ToString() + " CAD";
             }
 
             return fortnightMssg + taxMssg + totalMssg;
