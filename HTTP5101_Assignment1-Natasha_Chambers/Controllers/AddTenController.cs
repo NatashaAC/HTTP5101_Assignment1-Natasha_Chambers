@@ -19,14 +19,14 @@ namespace HTTP5101_Assignment1_Natasha_Chambers.Controllers
         /// This method will take in an input for a number  
         /// add ten to it and then output the total
         /// </summary>
-        /// <param name="id">input of a random number</param>
+        /// <param name="number">input of a random number</param>
         /// <returns>ten more than the original input</returns>
         /// <example> GET api/AddTen/21 -> 31 </example>
         /// <example> GET api/AddTen/0 -> 20 </example>
         /// <example> GET api/AddTen/-9 -> 10 </example>
-        public int Get(int id)
+        public int Get(int number)
         {
-            int total = id + 10;
+            int total = number + 10;
             return total;
         }
     }
